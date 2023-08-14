@@ -50,14 +50,16 @@ var newCoursesName = courses.map(function (course) {
 // 1. Gia tri cua mang moi
 // 2. Index cua mang
 // 3. Gia tri mang goc
-console.log(newCoursesName.join(''));
+
 
 
 
 // reduce method
 
 // Tinh tong so coin cua array newCourses
+function coinHandler(accumulator, currentValue, currentIndex) {
+    return accumulator += currentValue.coin;
+};
+var totalCoin = newCourses.reduce(coinHandler,0); // initial value : gia tri khoi tao -> tao kieu du lieu cho bien luu tru accumulator
 
-var totalCoin = newCourses.reduce(function () {
-
-});
+console.log(totalCoin);
