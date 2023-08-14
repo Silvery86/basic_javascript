@@ -29,7 +29,7 @@ var courses = [
 ];
 
 // duyet qua cac phan tu cua mang, moi khi duyet se chay function phia trong.
-var newCourses = courses.map(function (course,index,originArray) {
+function courseHandler(course, index, originArray) {
     return {
         id: course.id,
         name: `Khoa hoc: ${course.name}`,
@@ -38,7 +38,9 @@ var newCourses = courses.map(function (course,index,originArray) {
         index: index,
         originArray: originArray,
     };
-});
+}
+
+var newCourses = courses.map(courseHandler);
 
 var newCoursesName = courses.map(function (course) {
     return `<h2> ${course.name} </h2>`;
@@ -49,3 +51,13 @@ var newCoursesName = courses.map(function (course) {
 // 2. Index cua mang
 // 3. Gia tri mang goc
 console.log(newCoursesName.join(''));
+
+
+
+// reduce method
+
+// Tinh tong so coin cua array newCourses
+
+var totalCoin = newCourses.reduce(function () {
+
+});
