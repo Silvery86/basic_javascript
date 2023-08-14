@@ -117,10 +117,29 @@ var string = "Hello World!";
 var result = string.includes("Hello",0); 
 // 1. Tu khoa can tim kiem 
 //2. Vi tri bat dau tim kiem
-console.log(result);
+
 
 var userName = ["Giang","Hoang","Name"];
 
-console.log(userName.includes("Giang"));
 
 
+/* Math object
+
+- Math.PI : tra ve so pi
+- Math.round() : lam tron so
+- Math.abs() : tra ve gia tri tuyet doi
+- Math.ceil : Lam tron tren
+- Math.floor() : Lam tron duoi
+- Math.random() : Tra ve so thap phan ngau nhien < 1
+- Math.min() : Tra ve so nho nhat
+- Math.max() : Tra ve so lon nhat
+
+*/
+
+random = Math.floor(Math.random() * 100);
+
+// console.log(random);
+
+if (random < 50) {
+    // console.log("Thanh cong!");
+}
