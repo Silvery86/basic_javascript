@@ -62,4 +62,50 @@ function coinHandler(accumulator, currentValue, currentIndex) {
 };
 var totalCoin = newCourses.reduce(coinHandler,0); // initial value : gia tri khoi tao -> tao kieu du lieu cho bien luu tru accumulator
 
-console.log(totalCoin);
+
+
+
+// Flat an Array
+
+var depthArray = [1, 2, [3,4],5,6, [7,8,9]];
+
+var flatArray = depthArray.reduce((flatOutput, depthItem) => {
+    return flatOutput.concat(depthItem);
+},[]); // initial value la mang rong de tra ve gia tri la 1 mang
+
+// Tao mang moi 
+
+var topics = [
+    {
+        topic: "Front-end",
+        courses: [
+            {
+                id: 1,
+                name: "HTML & CSS"
+            },
+            {
+                id: 2,
+                name: "Javascript"
+            }
+        ]
+    },
+    {
+        topic: "Back-end",
+        courses: [
+            {
+                id: 3,
+                name: "PHP"
+            },
+            {
+                id: 4,
+                name: "NodeJS"
+            }
+        ]
+    }
+];
+
+var newCoursesArray = topics.reduce((couse, topic) => {
+    return couse.concat(topic.courses);
+},[]);
+
+console.log(newCoursesArray);
