@@ -108,4 +108,19 @@ var newCoursesArray = topics.reduce((couse, topic) => {
     return couse.concat(topic.courses);
 },[]);
 
-console.log(newCoursesArray);
+
+
+// includes method in Array/String
+// Tim kiem trong chuoi hoac mang
+
+var string = "Hello World!";
+var result = string.includes("Hello",0); 
+// 1. Tu khoa can tim kiem 
+//2. Vi tri bat dau tim kiem
+console.log(result);
+
+var userName = ["Giang","Hoang","Name"];
+
+console.log(userName.includes("Giang"));
+
+
