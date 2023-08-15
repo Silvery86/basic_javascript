@@ -143,3 +143,41 @@ random = Math.floor(Math.random() * 100);
 if (random < 50) {
     // console.log("Thanh cong!");
 }
+
+
+
+// Call back function
+// La 1 function duoc truyen qua doi so
+
+function myFunction(param) {
+    if (typeof param === 'function'){
+        param("Hello World");
+    }
+};
+
+function myCallback(value){
+    console.log("Value: ", value);
+};
+
+myFunction(myCallback)
+
+
+// Tu dinh nghia map function
+
+Array.prototype.map2 = function(callback) {
+    var arrayLength = this.length;
+    var output = [];
+    for(var i=0; i < arrayLength; i++){
+        var result = callback(this[i], i);
+        output.push(result);
+    }
+    return output;
+}
+
+var courseArray = ["Javascript","HTML&CSS","NodeJS"];
+
+var htmls = courseArray.map2(function(course){
+    return `<h1>${course}</h1>`;
+});
+
+console.log(htmls.join(""));
